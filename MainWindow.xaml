@@ -3,10 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Calc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Calc" Height="350" Width="500" WindowStyle="ThreeDBorderWindow" Background="#191919" Foreground="White" >
+    <Grid x:Name="MainRoot" >   <!--Nero: 191919-->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--Output-->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="" Grid.ColumnSpan="4" x:Name="calcOutput" />
+        <!--Numbers-->
+        <Button Grid.Row="1" Grid.Column="0" Background="#191919" Foreground="White">1</Button>
+        <Button Grid.Row="1" Grid.Column="1" Background="#191919" Foreground="White">2</Button>
+        <Button Grid.Row="1" Grid.Column="2" Background="#191919" Foreground="White">3</Button>
+        <Button Grid.Row="2" Grid.Column="0" Background="#191919" Foreground="White">4</Button>
+        <Button Grid.Row="2" Grid.Column="1" Background="#191919" Foreground="White">5</Button>
+        <Button Grid.Row="2" Grid.Column="2" Background="#191919" Foreground="White">6</Button>
+        <Button Grid.Row="3" Grid.Column="0" Background="#191919" Foreground="White">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" Background="#191919" Foreground="White">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" Background="#191919" Foreground="White">9</Button>
+        <Button Grid.Row="4" Grid.Column="1" Background="#191919" Foreground="White">0</Button>
+        <!--Math-->
+        <Button Grid.Row="1" Grid.Column="3" Background="#191919" Foreground="White">+</Button>
+        <Button Grid.Row="2" Grid.Column="3" Background="#191919" Foreground="White">-</Button>
+        <Button Grid.Row="3" Grid.Column="3" Background="#191919" Foreground="White">*</Button>
+        <Button Grid.Row="4" Grid.Column="3" Background="#191919" Foreground="White">/</Button>
+        <!--Other-->
+        <Button Grid.Row="4" Grid.Column="0" Background="#191919" Foreground="White">AC</Button>
+        <Button Grid.Row="4" Grid.Column="2" Background="#191919" Foreground="White">=</Button>
     </Grid>
 </Window>
